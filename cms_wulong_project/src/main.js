@@ -17,6 +17,11 @@ Vue.use(MintUI);//里面其实做的是注册所有的全局组件，和给vue.p
 // Vue.prototype.$axios = Axios ;
 // Axios.defaults.baseURL = 'http://localhost:8080';
 //axios 结束
+
+//引入 自己的插件安装器
+import Installer from '@/plugins/Installer'
+Vue.use(Installer);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

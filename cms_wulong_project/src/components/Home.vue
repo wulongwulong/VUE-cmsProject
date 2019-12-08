@@ -8,13 +8,14 @@
     </mt-swipe>
     <!-- 九宫格 -->
     <grid></grid>
+    <test></test>
 
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Grid from '../components/grid'
+import Grid from '../components/common/grid'
 
 export default {
   name: "Home",
@@ -41,6 +42,9 @@ export default {
     };
   },
   created() {
+    this.$log();
+    this.$log();
+    this.$log = 'abc' ;
     axios.get("/api/data")
       .then(res => {
         this.imgs = res.data.data;
