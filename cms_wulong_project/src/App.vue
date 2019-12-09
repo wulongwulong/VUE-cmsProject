@@ -5,7 +5,7 @@
     <!-- router-view -->
     <router-view />
     <!-- 底部菜单 -->
-    <mt-tabbar v-model="selected">
+    <mt-tabbar v-model="selected" >
       <mt-tab-item id="首页">
         <img slot="icon" src="../static/images/home.png" />
         首页

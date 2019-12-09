@@ -95,4 +95,4 @@ export default {
         margin-bottom: 3px;
         display: block;
     }
-</style>  
+</style>
