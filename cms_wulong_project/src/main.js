@@ -10,6 +10,12 @@ import 'mint-ui/lib/style.css';
 //引入mock.js
 // import Mock from 'mockjs'
 require('./mock');
+//引入moment
+import Moment from 'moment'
+//自定义moment全局过滤器
+Vue.filter('converTime',function(data,formatStr){  
+  return Moment(data).format(formatStr);
+});
 
 Vue.config.productionTip = false;
 
@@ -32,6 +38,7 @@ import Grid from '@/components/common/Grid';
 Vue.component(Grid.name , Grid);
 import NavBar from '@/components/common/NavBar';
 Vue.component(NavBar.name , NavBar);
+
 //全局组件 结束
 
 /* eslint-disable no-new */
