@@ -56,7 +56,7 @@ export default {
                 id:0,
                 name:'新闻资讯',
                 img_src:require('../../static/images/news_information.png'),
-                route: {name : 'Home'}
+                route: {name : 'NewsList'}
             },{
                 id:1,
                 name:'图文分享',

@@ -23,13 +23,16 @@ Vue.use(MintUI);//里面其实做的是注册所有的全局组件，和给vue.p
 import Installer from '@/plugins/Installer';
 Vue.use(Installer);
 
-//全局组件
+//全局组件开始
 import MyUl from '@/components/common/my-ul';
 Vue.component(MyUl.name , MyUl);
 import MyLi from '@/components/common/my-li';
 Vue.component(MyLi.name , MyLi);
 import Grid from '@/components/common/Grid';
 Vue.component(Grid.name , Grid);
+import NavBar from '@/components/common/NavBar';
+Vue.component(NavBar.name , NavBar);
+//全局组件 结束
 
 /* eslint-disable no-new */
 new Vue({
