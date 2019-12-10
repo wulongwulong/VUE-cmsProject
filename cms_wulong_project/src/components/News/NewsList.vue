@@ -5,7 +5,7 @@
 <!-- 内容 list-->
 <ul>
   <li v-for="(news ,index) in newsList" :key="index">
-    <a href="#">
+    <router-link :to=" {name: news.router.name , params:{id:news.id}}">
       <img :src="news.imgUrl" alt="error" class="leftimg">
       <div>
         <span>{{news.name}}</span>
@@ -14,8 +14,7 @@
           <p>发表时间:{{news.pubTime | converTime('YYYY年MM月DD日 HH:mm:ss')}}</p>
         </div>
       </div>
-    </a>
-
+    </router-link>
   </li>
 </ul>
   </div>
@@ -36,29 +35,37 @@ export default {
                 imgUrl : '../../../static/images/pic1.png',
                 times: 12,
                 pubTime: Date.parse(new Date()),
-
-
+                router: {name: 'newsDetail'},
+                id: 0,
               },{
                  name: '怎么让你更加有魅力',
                  imgUrl : '../../../static/images/pic2.png',
                  times: 12,
                  pubTime: Date.parse(new Date()),
+                 router: {name: 'newsDetail'},
+                 id: 1,
 
               },{
                  name: '如何正确的撸一只大脸猫',
                  imgUrl : '../../../static/images/pic3.png',
                  times: 12,
                  pubTime: Date.parse(new Date()),
+                 router: {name: 'newsDetail'},
+                 id: 2,
               },{
                  name: '怎么追到你喜欢的女孩子',
                  imgUrl : '../../../static/images/pic4.png',
                  times: 12,
                  pubTime: Date.parse(new Date()),
+                 router: {name: 'newsDetail'},
+                 id: 3,
               },{
                  name: '怎么追到你喜欢的女孩子',
                  imgUrl : '../../../static/images/pic5.png',
                  times: 12,
                  pubTime: Date.parse(new Date()),
+                 router: {name: 'newsDetail'},
+                 id: 4,
               }
             ]
         }
